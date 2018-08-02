@@ -1,0 +1,16 @@
+html {
+    position: relative;
+    height: 100%;
+    background: #fff;
+    * { box-sizing: border-box; }
+}
+
+button:focus { outline: none; }
+strong { font-weight: bold; }
+a { color: inherit; }
+p { font-family: 'Roboto', sans-serif; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+img { width: 100%; height: auto; }
+sup { vertical-align: super; font-size: .5em; line-height: 0; }
+sub { vertical-align: sub; font-size: .5em; line-height: 0; }
+em { font-style: italic; }

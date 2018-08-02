@@ -1,0 +1,22 @@
+.page-title {
+    font-family: "Advent Pro", sans-serif;
+    font-weight: 400; font-size: 35px;
+    line-height: 40px;
+    color: $off-white;
+    display: inline-block;
+    width: 100%; text-align: center;
+    padding: 14px;
+    user-select: none;
+}
+
+.article-title {
+    font-family: "Advent Pro", sans-serif;
+    font-weight: 400; font-size: 22px;
+    line-height: 32px;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: $off-white;
+    width: 100%;
+    user-select: none;
+}

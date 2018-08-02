@@ -1,0 +1,88 @@
+.spin-container {
+    perspective: 1000px;
+    height: 272px; width: 350px;
+    display: block;
+    margin-left: auto; margin-right: auto;
+    &:hover .spinner { transform: rotateY(180deg); }
+
+    .spinner { transition: .6s; transform-style: preserve-3d; position: relative; }
+    .front, .back {
+        height: 272px; width: 350px;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0; left: 0;
+        color: $off-black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300; font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        display: table;
+        padding-left: 10px; padding-right: 10px;
+        border-radius: 10px;
+
+        p { display: table-cell; vertical-align: middle; font-family: 'Josefin Sans', sans-serif; }
+    }
+
+    .spinning-card.front {
+        z-index: 2; transform: rotateY(0deg);
+        background: rgba(red($off-white), green($off-white), blue($off-white), .75);
+        border: 2px solid $grey;
+    }
+
+    .spinning-card.back {
+        transform: rotateY(180deg);
+        background: rgba(red($dark-yellow), green($dark-yellow), blue($dark-yellow), .75);
+        border: 2px solid #a89e15;
+    }
+}
+
+.input-3D {
+	width: 400px; margin: 0 auto;
+    position: absolute;
+	perspective: 1000px;
+    top: 50%; margin-top: -25px;
+    left: 50%; margin-left: -200px;
+
+    section {
+        transform: translateZ(-25px);
+        transform-style: preserve-3d;
+        height: 50px;
+        transition: all 0.35s;
+        /*faces*/
+        .input-text {
+            line-height: 47.5px; height: 50px;
+            background: #c429b0;
+            padding: 0 10px;
+            font-size: 20px; font-weight: 300;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 300px;
+            text-align: center;
+            color: #f2f2f2;
+            border: 2px solid #f2f2f2;
+            border-radius: 5px; margin: 0;
+            &#BIM {
+                background: white;
+                text-align: left; color: $dark-purple;
+                border: 2px solid $dark-purple;
+                display: block; width: 100%;
+                box-sizing: border-box;
+                outline: none;
+            }
+        }
+        #update-record { display: none; }
+        .submit-icon {
+            position: absolute; top: 0; right: 0;
+            color: $dark-purple;
+            line-height: 50px; padding: 0 10px;
+            font-size: 30px; font-weight: bold;
+            font-family: Arial;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        div { position: absolute; top: 0; left: 0; width: 100%; }
+        div:nth-child(1) { transform: rotateX(0deg) translateZ(25px); }
+        div:nth-child(2) { transform: rotateX(-90deg) translateZ(25px); }
+        &:hover, &:active, &:focus { transform: translateZ(-25px) rotateX(90deg); }
+    }
+}

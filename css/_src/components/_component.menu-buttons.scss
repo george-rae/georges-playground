@@ -1,0 +1,104 @@
+.mobile-nav-one {
+    height: 64px; width: 70px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%; margin-top: -32px;
+    left: 50%; margin-left: -35px;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 8px; width: 70px;
+        background: black;
+        opacity: 1;
+        border-radius: 3px;
+        margin-top: 0; left: 0;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+
+        &:nth-child(1) { top: 0px; }
+        &:nth-child(2) { top: 27px; }
+        &:nth-child(3) { top: 56px; }
+    }
+
+    &:hover {
+        span { background-color: $dark-green; }
+        span:nth-child(1) {
+            top: 27.5px; left: -9px;
+            width: 85px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        span:nth-child(2) { opacity: 0; left: -30px; }
+        span:nth-child(3) {
+            top: 27.5px; left: -9px;
+            width: 85px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.mobile-nav-two {
+    width: 80px;
+    height: 62px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%; margin-top: -31px;
+    left: 50%; margin-left: -40px;
+
+    &:before {
+        content: '';
+        opacity: 0;
+        width: 0; height: 0;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%; left: 50%;
+        background: transparent;
+        transform: translate(-50%, -50%);
+        transition: all 0.56s ease-in-out;
+    }
+    span {
+        display: block; position: absolute;
+        top: 31px;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        &:before { top: -31px; }
+        &:after { bottom: -31px; }
+    }
+
+    span, span:before, span:after {
+        width: 100%; height: 6px;
+        background: $off-black;
+        transition: all 0.56s ease-in-out;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+            width: 120px; height: 120px;
+            background: rgba(red($off-white), green($off-white), blue($off-white), .75);
+        }
+        span {
+            background: transparent;
+            &:before {
+                top: 0;
+                background-color: $dark-blue;
+                transform: rotate(225deg);
+            }
+            &:after {
+                bottom: 0;
+                background-color: $dark-blue;
+                transform: rotate(-225deg);
+            }
+        }
+    }
+}

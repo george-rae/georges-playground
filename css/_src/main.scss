@@ -1,0 +1,12 @@
+// base level styling elements first.
+@import 'partials/reset.scss';
+@import 'partials/settings.scss';
+@import 'partials/generics.scss';
+@import 'partials/objects.scss';
+
+// Now do the specific styling options, e.g. Header/ Footer.
+@import 'components/component.main.scss';
+@import 'components/component.footer.scss';
+@import 'components/component.animations.scss';
+@import 'components/component.loaders.scss';
+@import 'components/component.menu-buttons.scss';

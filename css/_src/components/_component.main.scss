@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: $off-white;
+
+    header {
+        width: 100%;
+        display: block;
+        background-color: $red;
+        padding: 30px 10px;
+    }
+
+    main {
+        margin-top: 0px;
+        padding-bottom: 64px;
+        height: 100%; overflow-y: auto;
+        flex-grow: 1;
+        padding-top: 16px;
+
+        &::-webkit-scrollbar { width: 4px; }
+        &::-webkit-scrollbar-thumb:vertical { background-color: rgba(0, 0, 0, .4); border-radius: 3px; }
+        &::-webkit-scrollbar-track-piece { background-color: rgba(0, 0, 0, .2); }
+
+        section.main-content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            article {
+                width: 48%; height: auto;
+                height: 352px; margin-bottom: 16px;
+                border-radius: 16px;
+                display: table;
+                position: relative;
+
+                &.blue {
+                    background-color: $blue;
+                    h2 { color: $off-black; }
+                }
+
+                &.green {
+                    background-color: $green;
+                    h2 { color: $off-black; }
+                }
+
+                &.yellow {
+                    background-color: $yellow;
+                    h2 { color: $off-black; }
+                }
+
+                &.black { background-color: $off-black; }
+                &.purple { background-color: $purple; }
+                &.red { background-color: $red; }
+            }
+        }
+    }
+
+}
